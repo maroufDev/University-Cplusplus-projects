@@ -1,0 +1,49 @@
+#include <iostream>
+
+// written by Ali Marouf
+
+using namespace std;
+
+int cmp(char*,char*);
+
+int shorterLength;
+
+int main(){
+
+    cout << "Ali Marouf\nExercise 7 \n\n";
+
+    string s1,s2;
+
+    cout << "enter the first Sentence: ";
+    cin >> s1;
+
+    cout << "enter the second Sentence: ";
+    cin >> s2;
+
+    shorterLength = (s1.length() > s2.length() ? s2.length(): s1.length()) ;
+
+
+
+
+    cout << cmp(&s1[0],&s2[0]);
+
+
+
+
+    return 0;
+}
+
+int cmp(char* s1,char* s2){
+
+
+    for(int i = 0; i< shorterLength; i++){
+
+        if (s1[i] != s2[i]) {
+
+                if (s1[i] > s2[i]) return 1;
+                else return -1;
+        }
+    }
+
+   return 0;
+}

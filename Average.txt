@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+
+// written by Ali Marouf
+
+using namespace std;
+
+float average(float a,int b,int c,int d,int e);
+
+int main(int argc, char** argv) {
+
+    cout << "Ali Marouf\nExercise 2 \n\n";
+
+    cout << average(5,7,9,10,11);
+    return 0;
+}
+
+
+// تعریف تابع میانگین
+
+float average(float a,int b,int c,int d,int e){
+return (a+b+c+d+e)/5;
+}

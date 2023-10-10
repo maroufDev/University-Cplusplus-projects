@@ -1,0 +1,35 @@
+#include <iostream>
+
+// written by Ali Marouf
+
+using namespace std;
+
+int findNumber(int,int[]);
+
+int arraySize;
+
+int main(){
+    cout << "Ali Marouf\nExercise 6 \n\n";
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    arraySize = sizeof(arr)/sizeof(int);
+    int number;
+    cout << "What number are you looking for?";
+    cin >> number;
+    cout << findNumber(number,arr);
+    return 0;
+}
+
+int findNumber(int number,int arr[]){
+
+
+    int counter = -1;
+
+    for (int* a = arr; a <= arr + arraySize; a++){
+        counter++;
+        if (*a == number){
+            return counter;
+        }
+    }
+
+  return NULL;
+}

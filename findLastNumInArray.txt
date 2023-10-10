@@ -1,0 +1,43 @@
+#include <iostream>
+#include <iomanip>
+
+// written by Ali Marouf 
+
+using namespace std;
+
+
+int findNumber(int,int,int[]);
+
+int main(int argc, char** argv) {
+
+    cout << "Ali Marouf\nExercise 4 \n\n";
+
+    int number = 0;
+    int a[] = {5,4,3,6,8,2,1,2,5,3,5,8,4,6,5,2,1,25,3};
+    int arrayLength = sizeof(a)/sizeof(number);
+    cout << "What number Are you looking for? ";
+    cin >> number;
+
+     if ( findNumber(number,arrayLength,a) != -1) {
+        cout << "the index of last " << number << " in the array is = " << findNumber(number,arrayLength,a);
+    } else{
+         cout << "your number didn't found in the array!" ;
+    }
+
+    return 0;
+}
+
+
+// تابع مد نظر
+
+int findNumber(int number,int arrayLength,int numbersList[]){
+
+   for(int i = arrayLength-1 ; i >= 0; i--){
+
+    if(numbersList[i] == number){
+        return i;
+    }
+   }
+   return -1;
+
+}

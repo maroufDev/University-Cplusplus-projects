@@ -1,0 +1,47 @@
+#include<iostream>
+#include<iomanip>
+
+// written by Ali Marouf
+
+using namespace std;
+
+bool found;
+void remove(float[],int&,int);
+
+int main(){
+
+    cout << "Ali Marouf\nExercise 5 \n\n";
+
+    float arr[10] = {1,2,3,4,5,6,7,8,9,10};
+    int arrayLength=10, i, element, j;
+
+    cout << "\nEnter Element to Delete: ";
+    cin >> element;
+
+    remove(arr,arrayLength,element);
+
+    return 0;
+}
+
+void remove(float arr[],int& arrayLength,int element){
+
+    for(int i = 0; i<arrayLength; i++)
+        {
+            if(arr[i]==element)
+            {
+                found = true;
+                for(int j=i; j<(arrayLength-1); j++)arr[j] = arr[j+1];
+                // arrayLength--;
+            }
+        }
+    if(found==0)
+        cout << "\nElement doesn't found in the Array!" ;
+    else{
+        cout << "\nElement Deleted Successfully!" << endl;
+        for(int i = 0; i<(arrayLength-1); i++)
+            cout << setw(3) << arr[i] << endl;
+
+
+    }
+
+    }

@@ -1,0 +1,32 @@
+#include <iostream>
+#include <iomanip>
+
+// written by Ali Marouf
+
+using namespace std;
+
+void computerCircle(float&,float&,float);
+
+int main(int argc, char** argv) {
+
+    cout << "Ali Marouf\nExercise 3 \n\n";
+
+    float area, circumference, radius = 0;
+    cout << "Enter the Circle Radius :";
+    cin >> radius;
+    computerCircle(area,circumference,radius);
+    cout << "The area of a circle with radius "<< radius <<" is equal to (" << area <<") "<< endl;
+    cout << "The circumference of a circle with radius "<< radius <<" is equal to (" << circumference <<") " << endl;
+    cout << "*****************************\n*** Written by Ali Maroof ***\n*****************************";
+
+    return 0;
+}
+
+
+// تعریف تایع ComputerCircle 
+
+void computerCircle(float& area,float& circumference, float r){
+    const double PI = 3.14159265359;
+    area = r*r*PI;
+    circumference = 2*r*PI;
+}
